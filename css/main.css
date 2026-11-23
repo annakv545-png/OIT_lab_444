@@ -1,3 +1,5 @@
+
+@import url('./variables.css');
 @import url('./common.css');
 @import url('./header.css');
 @import url('./hero.css');
@@ -7,7 +9,6 @@
 @import url('./footer.css');
 @import url('./modal.css');
 @import url('./mobile-menu.css');
-@import url('./variables.css');
 @import url('./form.css');
 @import url('./buttom_up.css');
 @import url('./signin-btn.css');
