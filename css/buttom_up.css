@@ -1,0 +1,32 @@
+.back-to-top {
+  position: fixed;         
+  bottom: 20px;             
+  right: 20px;              
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--white-color); 
+  border-radius: 50%;
+  box-shadow: var(--card-shadow);      
+  text-decoration: none;
+  transition: background-color var(--transition);
+  z-index: 1000;            
+}
+
+.back-to-top:hover {
+  background-color: var(--light-bg-color); 
+}
+
+.back-to-top-icon {
+  stroke: var(--accent-color); 
+}
+
+.back-to-top { transition: background-color var(--transition), transform var(--transition); }
+.back-to-top:hover { transform: translateY(-4px); }
+
+/* На малих екранах піднімаємо вище за нерухому кнопку Sign in */
+@media screen and (max-width: 767px) {
+  .back-to-top { bottom: 80px; }
+}

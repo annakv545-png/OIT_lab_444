@@ -1,0 +1,55 @@
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-title {
+  animation: fade-up 800ms ease-out both;
+}
+
+.hero-button {
+  animation: fade-up 800ms 250ms ease-out both;
+}
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.features-icon {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.features-item:hover .features-icon {
+  transform: scale(1.12) rotate(-4deg);
+}
+
+.team-img {
+  transition: transform 400ms ease;
+}
+
+.team-item:hover .team-img {
+  transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,141 @@
+.features-container {
+  max-width: 320px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.features-subtitle{
+      /* font-size: 36px;
+    text-align: center; */
+    
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+  margin-bottom: 8px;
+  text-align: center;
+
+
+}
+.features-text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+
+}
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.features {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.features-list {
+  display: flex;
+  gap: 72px; 
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features-item {
+  /* width: calc((100% - 72px) / 4);  */
+  width: 100%;
+}
+.features-icon-container{
+  display:  none;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: var(--light-bg-color);
+  border-radius: 4px;
+  margin-bottom: 8px;
+ border: 1px solid #8E8F99;
+
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.features-icon {
+  width: 64px;
+  height: 64px;
+}
+@media screen and (min-width: 768px) {
+  .features-container {
+    max-width: 768px;
+  }
+
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 72px 24px; 
+  }
+
+  .features-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .features-subtitle {
+    text-align: left;
+
+  }
+}
+
+
+@media screen and (min-width: 1158px) {
+  .features-container {
+    max-width: 1158px;
+    padding-left: 15px; 
+    padding-right: 15px;
+  }
+
+  .features {
+    padding-top: 120px ;
+    padding-bottom: 120px ;
+  }
+
+  .features-list {
+    flex-wrap: nowrap ;
+    gap: 24px; 
+  }
+
+  .features-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+
+  .features-icon-container {
+    display: flex; 
+  }
+
+  .features-subtitle {
+
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .features-text {
+    font-weight: 400;
+}
+   
+  
+}

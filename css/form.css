@@ -1,0 +1,265 @@
+/* ===== Form page ===== */
+.form-page {
+  min-height: 100vh;
+  padding: 72px 0;
+  background-color: #f4f4fd;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-title {
+  margin-bottom: 32px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #2e2f42;
+}
+
+.auth-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow:
+    0 1px 6px rgba(46, 47, 66, 0.08),
+    0 1px 1px rgba(46, 47, 66, 0.16),
+    0 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+  background-color: #fff;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  outline: none;
+  transition:
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input {
+  height: 40px;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.form-input:hover,
+.form-textarea:hover {
+  border-color: #2e2f42;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #4d5ae5;
+  box-shadow: 0 0 0 3px rgba(77, 90, 229, 0.2);
+}
+
+/* Іконка в полі (якщо додасте svg.input-icon в .input-wrapper) */
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #4d5ae5;
+  pointer-events: none;
+}
+
+.input-wrapper:has(.input-icon) .form-input {
+  padding-left: 44px;
+}
+
+/* ===== Checkbox ===== */
+.checkbox-wrapper {
+  margin: 24px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #4d5ae5;
+  border-radius: 2px;
+  background-color: #fff;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-icon {
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-wrapper input:checked + .checkbox-label .custom-checkbox {
+  background-color: #4d5ae5;
+}
+
+.checkbox-wrapper input:checked + .checkbox-label .checkbox-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.checkbox-wrapper input:focus-visible + .checkbox-label .custom-checkbox {
+  box-shadow: 0 0 0 3px rgba(77, 90, 229, 0.3);
+}
+
+.privacy-link {
+  color: #4d5ae5;
+  text-decoration: underline;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-link:hover,
+.privacy-link:focus {
+  color: #404bbf;
+}
+
+/* ===== Buttons ===== */
+.form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.btn-submit,
+.btn-reset {
+  flex: 1;
+  height: 48px;
+  padding: 0 24px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-submit {
+  color: #fff;
+  background-color: #4d5ae5;
+  border: none;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+  background-color: #404bbf;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(77, 90, 229, 0.35);
+}
+
+.btn-reset {
+  color: #4d5ae5;
+  background-color: #e7e9fc;
+  border: none;
+}
+
+.btn-reset:hover,
+.btn-reset:focus {
+  background-color: #d5d8f7;
+}
+
+/* Помилка валідації після спроби відправки */
+.form-input:user-invalid {
+  border-color: #e5484d;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 767px) {
+  .form-page {
+    padding: 40px 0;
+  }
+
+  .form-title {
+    font-size: 28px;
+  }
+
+  .auth-form {
+    margin: 0 16px;
+    padding: 24px 16px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+/* ===== Валідація без JavaScript (атрибути required/pattern/type + псевдокласи) ===== */
+.input-wrapper::after {
+  content: attr(data-error);
+  display: none;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #e5484d;
+}
+/* Користувач щось ввів, але значення не проходить перевірку */
+.form-input:not(:placeholder-shown):invalid {
+  border-color: #e5484d;
+  box-shadow: 0 0 0 3px rgba(229, 72, 77, 0.15);
+}
+.input-wrapper:has(.form-input:not(:placeholder-shown):invalid)::after { display: block; }
+/* Значення коректне */
+.form-input:not(:placeholder-shown):valid { border-color: #31d0aa; }
+/* Незаповнене обов'язкове поле після спроби відправки */
+.form-input:user-invalid { border-color: #e5484d; }
+.input-wrapper:has(.form-input:user-invalid)::after { display: block; }
+.checkbox-wrapper:has(input:user-invalid) .custom-checkbox { border-color: #e5484d; }

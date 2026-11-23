@@ -1,0 +1,125 @@
+.reviews {
+  background-color: #f4f4fd;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 8px 4px 16px;
+  overflow-x: auto;
+  list-style: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+@media screen and (min-width: 768px) {
+  .carousel-slide {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .carousel-slide {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+}
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.carousel-btn:hover, .carousel-btn:focus-visible {
+  background-color: #404bbf;
+  transform: scale(1.08);
+}
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 1px solid #4d5ae5;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.carousel-dot.is-active {
+  width: 24px;
+  background-color: #4d5ae5;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  padding: 32px 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16), 0 1px 6px rgba(46, 47, 66, 0.08);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.review-card:hover {
+  transform: translateY(-4px);
+}
+.review-stars {
+  color: #f5b301;
+  letter-spacing: 4px;
+}
+.review-text {
+  flex-grow: 1;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #fff;
+  background-color: #4d5ae5;
+}
+.review-name {
+  font-weight: 500;
+  font-size: 18px;
+  color: #2e2f42;
+}
+.review-role {
+  font-size: 14px;
+  color: #434455;
+}

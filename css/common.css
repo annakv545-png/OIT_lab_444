@@ -1,0 +1,78 @@
+html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+body{
+    font-family: var(--primary-font);
+    color:var(--primary-text-color) ;
+    background-color: var(--main-bg-color);
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.section-title {
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--title-color) 
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 320px;
+    margin-left: auto;
+  margin-right: auto;
+    padding-right:  16px;
+    padding-left:  16px;
+
+}
+.section{
+    padding-top: 120px;
+  padding-bottom: 120px;
+}
+.sr-only {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  margin: -1px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

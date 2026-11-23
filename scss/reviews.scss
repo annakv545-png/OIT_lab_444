@@ -1,0 +1,47 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.reviews { background-color: $light; }
+
+.carousel {
+  &-track {
+    display: flex; gap: 24px; margin: 0; padding: 8px 4px 16px;
+    overflow-x: auto; list-style: none;
+    scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
+  }
+  &-slide {
+    flex: 0 0 100%; scroll-snap-align: start;
+    @include mq($bp-tablet)  { flex-basis: calc((100% - 24px) / 2); }
+    @include mq($bp-desktop) { flex-basis: calc((100% - 48px) / 3); }
+  }
+  &-controls { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 32px; }
+  &-btn {
+    @include circle(40px);
+    border: none; cursor: pointer; color: $white; background-color: $accent;
+    transition: background-color $transition, transform $transition;
+    &:hover, &:focus-visible { background-color: $accent-hover; transform: scale(1.08); }
+  }
+  &-dots { display: flex; gap: 8px; }
+  &-dot {
+    width: 8px; height: 8px; padding: 0; border: 1px solid $accent; border-radius: 4px;
+    background: transparent; cursor: pointer;
+    transition: width $transition, background-color $transition;
+    &.is-active { width: 24px; background-color: $accent; }
+  }
+}
+
+.review {
+  &-card {
+    display: flex; flex-direction: column; gap: 16px; height: 100%;
+    padding: 32px 24px; background-color: $white; border-radius: 4px; box-shadow: $card-shadow;
+    transition: transform $transition;
+    &:hover { transform: translateY(-4px); }
+  }
+  &-stars { color: $star; letter-spacing: 4px; }
+  &-text { flex-grow: 1; line-height: 1.5; letter-spacing: 0.02em; color: $text; }
+  &-author { display: flex; align-items: center; gap: 16px; }
+  &-avatar { @include circle(48px); flex-shrink: 0; font-weight: 700; color: $white; background-color: $accent; }
+  &-name { font-weight: 500; font-size: 18px; color: $title; }
+  &-role { font-size: 14px; color: $text; }
+}

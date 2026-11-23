@@ -1,0 +1,9 @@
+@use 'variables' as *;
+
+@mixin mq($bp) {
+  @media screen and (min-width: $bp) { @content; }
+}
+@mixin circle($size) {
+  width: $size; height: $size; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
